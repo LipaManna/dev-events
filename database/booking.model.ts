@@ -32,7 +32,7 @@ const bookingSchema = new Schema<IBooking>(
 );
 
 // Create index on eventId for faster queries
-bookingSchema.index({ eventId: 1 });
+bookingSchema.index({ eventId: 1, email: 1 }, { unique: true, name: 'eventId_email_unique' });
 
 // Pre-save hook to validate event existence
 bookingSchema.pre('save', async function () {
