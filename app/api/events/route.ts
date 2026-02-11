@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
 
     /**
      * -------------------------------
-     * MULTIPART / FORM-DATA REQUEST
+     * MULTIPART / FORM_DATA REQUEST
      * -------------------------------
      */
     if (contentType.includes("multipart/form-data")) {
